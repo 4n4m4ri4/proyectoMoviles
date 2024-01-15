@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearPrincipal"
+    tools:context=".PrincipalActivity">
+
+     <ImageView
+         android:id="@+id/imagenTop"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="25"
+         app:srcCompat="@drawable/pasteleria"
+         android:scaleType="centerCrop"/>
+
+    <ScrollView
+      android:id="@+id/scrollCuerpo"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="67">
+
+    <RelativeLayout
+     android:id="@+id/relativeCuerpo"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="5dp">
+
+     <TextView
+     android:id="@+id/textoDescri"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:fontFamily="serif"
+     android:textSize="16sp"
+     android:textColor="@color/primaryColor"
+     android:text="¡Disfrute de nuestros diferentes productos!"
+     android:layout_margin="8dp"/>
+
+     <HorizontalScrollView
+      android:id="@+id/menuScrolable"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/primaryDarkColor"
+      android:scrollbarStyle="outsideInset"
+      android:layout_below="@+id/textoDescri">
+
+        <LinearLayout
+         android:id="@+id/linearMenuScrollable"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+
+          <RelativeLayout
+           android:id="@+id/relativeCategoriaCupcake"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_margin="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/imagenCategoriaCupcake"
+             android:layout_width="80dp"
+             android:layout_height="80dp"
+             android:layout_margin="8dp"
+             android:src="@drawable/cupcake" />
+
+             <TextView
+             android:id="@+id/textoCategoriaCupcake"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/imagenCategoriaCupcake"
+             android:layout_centerHorizontal="true"
+             android:text="Cupcakes"
+             android:textStyle="bold"/>
+
+           </RelativeLayout>
+
+           <RelativeLayout
+            android:id="@+id/relativeCategoriaTarta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp">
+
+             <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/imagenCategoriaTarta"
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_margin="8dp"
+              android:src="@drawable/pastel" />
+
+              <TextView
+              android:id="@+id/textoCategoriaTarta"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/imagenCategoriaTarta"
+              android:layout_centerHorizontal="true"
+              android:text="Tartas"
+              android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+            android:id="@+id/relativeCategoriaGalleta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp">
+
+              <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/imagenCategoriaGalleta"
+               android:layout_width="80dp"
+               android:layout_height="80dp"
+               android:layout_margin="8dp"
+               android:src="@drawable/galletas" />
+
+               <TextView
+                android:id="@+id/textoCategoria3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagenCategoriaGalleta"
+                android:layout_centerHorizontal="true"
+                android:text="Galletas"
+                android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+             android:id="@+id/relativeCategoriaBizcocho"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:layout_margin="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                 android:id="@+id/imagenCategoriaBizcocho"
+                 android:layout_width="80dp"
+                 android:layout_height="80dp"
+                 android:layout_margin="8dp"
+                 android:src="@drawable/bizcocho" />
+
+                 <TextView
+                  android:id="@+id/textoCategoria4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imagenCategoriaBizcocho"
+                  android:layout_centerHorizontal="true"
+                  android:text="Bizcochos"
+                  android:textStyle="bold"/>
+
+             </RelativeLayout>
+          </LinearLayout>
+      </HorizontalScrollView>
+
+       <TextView
+           android:id="@+id/textoTituloHorario"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/menuScrolable"
+           android:text="HORARIO:"
+           android:layout_marginTop="15dp"
+           android:layout_marginLeft="15dp"
+           android:textStyle="bold"
+           android:textSize="18sp"/>
+
+       <TextView
+           android:id="@+id/textoHorarioSemana"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/textoTituloHorario"
+           android:text="Lunes a viernes: 9:00 - 20:00"
+           android:layout_marginLeft="15dp"
+           android:layout_marginTop="5dp"
+           android:textSize="16sp"/>
+       <TextView
+           android:id="@+id/textoHorarioFindes"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/textoHorarioSemana"
+           android:text="Sábados y festivos: 9:00 - 15:00"
+           android:layout_marginLeft="15dp"
+           android:layout_marginTop="10dp"
+           android:textSize="16sp"/>
+
+       <Button
+           android:id="@+id/botonMapa"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/textoHorarioFindes"
+           android:layout_margin="15dp"
+           android:text="Ubicación"/>
+
+      </RelativeLayout>
+       </ScrollView>
+       <LinearLayout
+           android:id="@+id/linearRedes"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="8"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:background="@color/primaryDarkColor">
+
+           <ImageView
+               android:id="@+id/imagenPhone"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               app:srcCompat="@drawable/phone"
+               android:layout_margin="5dp"/>
+           <ImageView
+               android:id="@+id/imagenFacebook"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               app:srcCompat="@drawable/facebook"
+               android:layout_margin="5dp"/>
+           <ImageView
+               android:id="@+id/imagenInstagram"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               app:srcCompat="@drawable/instagram"
+               android:layout_margin="5dp"/>
+           <ImageView
+               android:id="@+id/imagenGoogle"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               app:srcCompat="@drawable/google"
+               android:layout_margin="5dp"/>
+
+       </LinearLayout>
+
+
+
+</LinearLayout>

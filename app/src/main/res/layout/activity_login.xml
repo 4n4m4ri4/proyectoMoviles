@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollLogin"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativePrincipalLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imagenLogin"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/fondo"
+        android:alpha="0.8"/>
+     <TextView
+         android:id="@+id/textoBienvenida"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Bienvenidos"
+         android:textSize="65sp"
+         android:textColor="@color/secondaryLightColor"
+         android:textStyle="bold"
+         android:shadowRadius="10"
+         android:shadowDx="4"
+         android:shadowDy="4"
+         android:shadowColor="#774067"
+         android:layout_centerHorizontal="true"
+         android:layout_margin="60dp"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:elevation="8dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/imagenLogin"
+        android:background="@drawable/sombra">
+
+        <TextView
+            android:id="@+id/textoPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/primaryDarkColor"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="¿Ya eres cliente?"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoPregunta"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextEmail"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            tools:ignore="TouchTargetSizeCheck" />
+        <Button
+            android:id="@+id/botonRegistro"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextPassword"
+            android:text="registrar"
+            android:layout_margin="20dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:id="@+id/botonAcceso"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextPassword"
+            android:layout_alignParentRight="true"
+            android:text="acceder"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_margin="20dp"/>
+    </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.proyectofinal"
+    tools:ignore="CoarseFineLocation">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProyectoFinal">
+        <activity
+            android:name=".CompraActivity"
+            android:exported="false"
+            android:label="Compra">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <data android:mimeType="*/*" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <data android:scheme="mailto" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProductListBizcochos"
+            android:exported="false"
+            android:label="Bizcochos"
+            android:parentActivityName=".PrincipalActivity" />
+        <activity
+            android:name=".ProductListGalletas"
+            android:exported="false"
+            android:label="Galletas"
+            android:parentActivityName=".PrincipalActivity" />
+        <activity
+            android:name=".ProductListTartas"
+            android:exported="false"
+            android:label="Tartas"
+            android:parentActivityName=".PrincipalActivity" />
+        <activity
+            android:name=".ProductListCupcakes"
+            android:exported="false"
+            android:label="Cupcakes"
+            android:parentActivityName=".PrincipalActivity" />
+        <activity
+            android:name=".EditAndModifyActivity"
+            android:exported="false"
+            android:label="Editar/Borrar"
+            android:parentActivityName=".ProductListAdmin" />
+        <activity
+            android:name=".NuevoProducto"
+            android:exported="false"
+            android:label="Nuevo Producto"
+            android:parentActivityName=".ProductListAdmin" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_mapa"
+            android:parentActivityName=".PrincipalActivity" />
+        <activity
+            android:name=".CarritoActivity"
+            android:exported="true"
+            android:label="Carrito"
+            android:parentActivityName=".PrincipalActivity" />
+        <activity
+            android:name=".ProductListAdmin"
+            android:exported="true"
+            android:label="ProductosAdmin"
+            android:parentActivityName=".LoginActivity" />
+        <activity
+            android:name=".ItemList"
+            android:exported="false" />
+        <activity
+            android:name=".PrincipalActivity"
+            android:exported="true"
+            android:label="Inicio" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <!-- Include the host attribute if you want your app to respond
+                     only to URLs with your app's domain. -->
+                <data android:scheme="http" android:host="www.example.com" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- The BROWSABLE category is required to get links from web pages. -->
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
